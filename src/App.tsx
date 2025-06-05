@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Package, LayoutDashboard, FileBarChart2, Megaphone, FlaskRound as Flask, ClipboardCheck, Store, DollarSign, ShoppingCart, FileSpreadsheet } from 'lucide-react';
+import { Package, LayoutDashboard, FileBarChart2, Megaphone, FlaskRound as Flask, ClipboardCheck, Store, DollarSign, ShoppingCart, FileSpreadsheet, BarChart2 } from 'lucide-react';
 import Dashboard from './Dashboard';
 import Reports from './Reports';
 import VisitForm from './VisitForm';
@@ -11,6 +11,7 @@ import PharmacyVisitForm from './PharmacyVisitForm';
 import FinancialCollector from './FinancialCollector';
 import OrderCollector from './OrderCollector';
 import PharmacyReports from './PharmacyReports';
+import PharmacyDashboard from './PharmacyDashboard';
 
 function App() {
   return (
@@ -69,6 +70,13 @@ function App() {
                 <span>التقارير</span>
               </Link>
               <Link
+                to="/pharmacy-dashboard"
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
+              >
+                <BarChart2 className="w-5 h-5" />
+                <span>لوحة تحكم الصيدليات</span>
+              </Link>
+              <Link
                 to="/pharmacy-reports"
                 className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
               >
@@ -101,6 +109,7 @@ function App() {
           <Route path="/evaluation" element={<EvaluationForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/pharmacy-dashboard" element={<PharmacyDashboard />} />
           <Route path="/pharmacy-reports" element={<PharmacyReports />} />
           <Route path="/financial-collector" element={<FinancialCollector />} />
           <Route path="/order-collector" element={<OrderCollector />} />
