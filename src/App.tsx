@@ -74,7 +74,14 @@ function App() {
                 className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
               >
                 <BarChart2 className="w-5 h-5" />
-                <span>لوحة تحكم الصيدليات</span>
+                <span>لوحة تحكم. الصيدليات</span>
+              </Link>
+              <Link
+                to="/pharmacy-dashboard"
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
+              >
+                <BarChart2 className="w-5 h-5" />
+                <span>لوحة تحكم. الصيدليات</span>
               </Link>
               <Link
                 to="/pharmacy-reports"
