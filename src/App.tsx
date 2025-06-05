@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Package, LayoutDashboard, FileBarChart2, Megaphone, FlaskRound as Flask, ClipboardCheck, Store, DollarSign, ShoppingCart } from 'lucide-react';
+import { Package, LayoutDashboard, FileBarChart2, Megaphone, FlaskRound as Flask, ClipboardCheck, Store, DollarSign, ShoppingCart, FileSpreadsheet } from 'lucide-react';
 import Dashboard from './Dashboard';
 import Reports from './Reports';
 import VisitForm from './VisitForm';
@@ -10,6 +10,7 @@ import EvaluationForm from './EvaluationForm';
 import PharmacyVisitForm from './PharmacyVisitForm';
 import FinancialCollector from './FinancialCollector';
 import OrderCollector from './OrderCollector';
+import PharmacyReports from './PharmacyReports';
 
 function App() {
   return (
@@ -68,6 +69,13 @@ function App() {
                 <span>التقارير</span>
               </Link>
               <Link
+                to="/pharmacy-reports"
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
+              >
+                <FileSpreadsheet className="w-5 h-5" />
+                <span>تقارير الصيدليات</span>
+              </Link>
+              <Link
                 to="/financial-collector"
                 className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
               >
@@ -93,6 +101,7 @@ function App() {
           <Route path="/evaluation" element={<EvaluationForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/pharmacy-reports" element={<PharmacyReports />} />
           <Route path="/financial-collector" element={<FinancialCollector />} />
           <Route path="/order-collector" element={<OrderCollector />} />
         </Routes>
